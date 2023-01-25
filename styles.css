@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    border: 1px solid;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    padding: 10px;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 5px;
+    padding: 5px;
+    width: min(100%, 500px);
+    /* height: 90vh; */
+}
+
+.container .input {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.display {
+    width: 100%;
+    text-align: end;
+    height: 120px;
+    font-size: 90px;
+    border-radius: 5px;
+}
+
+.keypad {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, );
+    gap: 15px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.keypad .equals {
+    grid-column: 3 / 5;
+}
+
+button {
+    padding: 5px;
+    border-radius: 30px;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+/* @media screen and (max-width: ) {
+    
+} */
