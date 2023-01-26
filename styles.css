@@ -19,11 +19,23 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    gap: 5px;
     border-radius: 5px;
     padding: 5px;
     width: min(100%, 500px);
-    /* height: 90vh; */
+    position: relative;
+}
+
+.warning-box {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 16px;
+    display: none;
+}
+
+.prev-solution {
+    text-align: end;
 }
 
 .container .input {
@@ -32,14 +44,15 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 5px;
+    margin-bottom: 5px;
 }
 
 .display {
     width: 100%;
     text-align: end;
-    height: 120px;
-    font-size: 90px;
+    font-size: 60px;
     border-radius: 5px;
+    padding-top: 80px;
 }
 
 .keypad {
@@ -63,6 +76,3 @@ button {
     font-weight: 800;
 }
 
-/* @media screen and (max-width: ) {
-    
-} */

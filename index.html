@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator App</title>
     <link rel="stylesheet" href="./styles.css">
-    <script src="https://kit.fontawesome.com/8ad6a24b5e.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/8ad6a24b5e.js" crossorigin="anonymous"></script> -->
 </head>
 <body>
     <div class="container">
         <div class="input">
-            <input type="text" class="display" id="display-screen" placeholder="0">
+            <input type="text" class="prev-solution" id="display-screen" placeholder="0" maxlength="12">
+            <input type="text" class="display" id="display-screen" placeholder="0" maxlength="12">
         </div>
+        <div class="warning-box">can not divide by zero</div>
         <div class="keypad">
             <button class="btn clear">AC</button>
-            <button class="btn backspace"><i class="fa-solid fa-delete-left"></i></button>
+            <button class="btn backspace">DEL</i></button>
             <button class="btn operators" id="modulus" value="%">%</button>
             <button class="btn operators" id="division" value="/">/</button>
             <button class="btn numbers" id="seven" value="7">7</button>
@@ -25,14 +27,14 @@
             <button class="btn numbers" id="four" value="4">4</button>
             <button class="btn numbers" id="five" value="5">5</button>
             <button class="btn numbers" id="six" value="6">6</button>
-            <button class="btn operators" id="subtraction" value="-">-</button>
+            <button class="btn operators" id="substraction" value="-">-</button>
             <button class="btn numbers" id="one" value="1">1</button>
             <button class="btn numbers" id="two" value="2">2</button>
             <button class="btn numbers" id="three" value="3">3</button>
             <button class="btn operators" id="addition" value="+">+</button>
             <button class="btn numbers" id="zero" value="0">0</button>
             <button class="btn decimal" id="decimal" value=".">.</button>
-            <button class="btn operators equals" id="equals" value="=">=</button>
+            <button class="btn equals" id="equals" value="=">=</button>
         </div>
     </div>
     <script src="./main.js"></script>
