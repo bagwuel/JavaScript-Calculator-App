@@ -45,12 +45,21 @@ body {
     justify-content: center;
     border-radius: 5px;
     margin-bottom: 5px;
+    position: relative;
+}
+
+.minus {
+    position: absolute;
+    right: 5px;
+    font-size: 30px;
+    font-weight: 600;
+    display: none;
 }
 
 .display {
     width: 100%;
     text-align: end;
-    font-size: 60px;
+    font-size: 40px;
     border-radius: 5px;
     padding-top: 80px;
 }
