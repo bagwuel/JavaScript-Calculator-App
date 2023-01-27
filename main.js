@@ -15,14 +15,14 @@ buttons.forEach(button => {
     button.addEventListener('mousedown', () => {
         button.style.boxShadow = 'none';
         button.style.transform = `translate(${3}px, ${3}px)`
-        // button.style.transition = '50ms';
+        button.style.transition = '50ms';
     })
 })
 
 buttons.forEach(button => {
     button.addEventListener('mouseup', () => {
         button.style.boxShadow = '2px 2px 2px 2px black';
-        button.style.transform = `translate(${-3}px, ${-3}px)`
+        button.style.transform = `translate(${0}px, ${0}px)`
         button.style.transition = '50ms';
     })
 })
