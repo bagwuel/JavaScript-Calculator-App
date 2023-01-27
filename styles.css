@@ -92,11 +92,11 @@ button {
     border-radius: 30px;
     font-size: 30px;
     font-weight: 800;
+    border: 2px solid black;
     box-shadow: 2px 2px 2px 2px black;
 }
 
 .operators{
-    background-color: #ff68c8ee;
     background-color: #fccf47;
 }
 
@@ -109,6 +109,8 @@ button {
 }
 .equals {
     color: green;
+    background-color: #fccf47;
+
 }
 
 .numbers, .decimal {
