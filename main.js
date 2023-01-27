@@ -94,51 +94,49 @@ equals.addEventListener('click', () => {
 function solve (input) {
    
     let inputArray = input.split(/[%*\-+/]/)
-    let operator = input.match(/[%*\-+/]/);
+    let operator = input.match(/[%*\-+/]/g);
     if( input.startsWith('-')) {
         inputArray.shift()
+        minusSign = '-'
+        minus.style.display = 'block';
     }
     if (minusSign) {
         inputArray[0] = `-${inputArray[0]}`
+        minusSign = ''
+        minus.style.display = 'none';
     }
     if (inputArray.length > 1 && inputArray.every((inputValue) => Boolean(inputValue))) {
         inputArray = inputArray.map((inputValue) => parseFloat(inputValue))
-       
-        console.log(inputArray[0]);
-        console.log(minusSign);
-        if (operator[0] === '+')
+    
+        if (operator[operator.length - 1] === '+')
             input = (inputArray[0] * 1000 + inputArray[1] * 1000) / 1000;
-        if (operator[0] === '-')
+        if (operator[operator.length - 1] === '-')
             input = (inputArray[0] - inputArray[1]);
-        if (operator[0] === '*')
+        if (operator[operator.length - 1] === '*')
             input = (inputArray[0] * inputArray[1]);
-        if (operator[0] === '/') {
+        if (operator[operator.length - 1] === '/') {
             if (inputArray[1] === 0) {
                 infinityWarningBox.style.display = 'block'
                 setTimeout(() => {
                     infinityWarningBox.style.display = 'none'
-                }, 1000);
+                }, 1500);
                 return ('');
             }
             else
                 input = (inputArray[0] / inputArray[1]);
         }
-        if (operator[0] === '%') {
+        if (operator[operator.length - 1] === '%') {
             if (inputArray[1] === 0) {
                 infinityWarningBox.style.display = 'block'
                 setTimeout(() => {
                     infinityWarningBox.style.display = 'none'
-                }, 1000);
+                }, 1500);
                 return ('');
             }
             else
                 input = (inputArray[0] % inputArray[1]);
         }
     }
-    // if(input.toString().startsWith('-')) {
-    //     minusSign = '-'
-    //     minus.style.display = 'block';
-    // }
     return (input);
 }
 
